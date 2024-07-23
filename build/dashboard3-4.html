@@ -250,18 +250,16 @@
             <main class="bg-white-300 flex-1 p-3 overflow-hidden">
                 <!-- Work Order Management -->
                 <div class="bg-white shadow rounded-lg p-6">
-                    <h2 class="text-2xl font-normal mb-6">Work Order Management</h2>
+                    <h2 class="text-2xl font-bold mb-6">Work Order Management</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- Work Order -->
                         <div class="bg-gray-100 p-6 rounded-lg shadow">
-                            <h4 class="text-xl font-normal mb-4 text-center">Task</h4>
-                            <h3 class="text-xl font-normal mb-4 text-center">Work Order</h3>
+                            <h3 class="text-xl font-semibold mb-4">Task Work Order</h3>
                             <div class="flex justify-center mb-4">
                                 <div class="relative">
-                                    <!-- <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
+                                    <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
                                         <span class="text-lg font-bold">64.35%<br>Complete</span>
-                                    </div> -->
-                                    <div id="chart"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="space-y-2">
@@ -285,8 +283,7 @@
                         </div>
                         <!-- PM Work Order -->
                         <div class="bg-gray-100 p-6 rounded-lg shadow">
-                            <h4 class="text-xl font-normal mb-4 text-center">Task</h4>
-                            <h3 class="text-xl font-normal mb-4 text-center">PM Work Order scheduled By Current Date</h3>
+                            <h3 class="text-xl font-semibold mb-4">Task PM Work Order scheduled By Current Date</h3>
                             <div class="flex justify-center mb-4">
                                 <div class="relative">
                                     <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
@@ -315,8 +312,7 @@
                         </div>
                         <!-- SCM Work Order -->
                         <div class="bg-gray-100 p-6 rounded-lg shadow">
-                            <h4 class="text-xl font-normal mb-4 text-center">Task</h4>
-                            <h3 class="text-xl font-normal mb-4 text-center">SCM Work Order</h3>
+                            <h3 class="text-xl font-semibold mb-4">Task SCM Work Order</h3>
                             <div class="flex justify-center mb-4">
                                 <div class="relative">
                                     <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
@@ -521,7 +517,132 @@
                         </div>
                     </div>
                     <!--/Summary of Aging Work Order Management Section-->
-                </div>                
+                </div>
+
+                <!-- Ascertain Performance Deduction (APD) -->
+                <div class="bg-white shadow rounded-lg p-6 mt-6">
+                    <h2 class="text-2xl font-bold mb-6">Ascertain Performance Deduction (APD)</h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">KPI</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">Critical Success Factor (CSF)</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">Key Performance Index (KPI)</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">Performance Indicator (PI)</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">Weightage (%) (W)</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">APD Value (W x APD max)(V)</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">Achievement</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">APD Value Deduction (RM)</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">Demerit Points (DP)</th>
+                                    <th class="py-2 px-4 bg-gray-100 border-b border-gray-200 text-gray-800 text-left text-sm uppercase font-normal">Demerit Points Quarterly</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-700">
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">1A</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">CUSTOMER SATISFACTION (75% AVERAGE)</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">CUSTOMER SATISFACTION SURVEY RATING > 80%</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">10</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">12312.12</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">11231.12</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">1B</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">CUSTOMER SATISFACTION (75% AVERAGE)</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">CUSTOMER RATING IN WORK ORDER SHEET > 70%</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">20</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1000</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">2A</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">FMM SERVICE DELIVERY RELATED TO CORE BUSINESS</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">CUSTOMER SATISFACTION SURVEY RATING > 80%</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">30</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1900</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1000</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">2B</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">FMM SERVICE DELIVERY RELATED TO CORE BUSINESS</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">EXECUTE TIME > 95%</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">30</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1900</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1000</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">2C</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">FMM SERVICE DELIVERY RELATED TO CORE BUSINESS</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">PENDING / BACKLOG WORK ORDER COMPLETION 100%</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">30</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1900</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1000</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">3</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">ROUTINE INSPECTION / SELF - FINDING (PROACTIVE MAINTENANCE - 80%)</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">SELF-FINDING WORK ORDER > 80% FROM TOTAL WORK ORDER</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">20</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1213</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">12311</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">4A</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">SERVICE AVAILABILITY (80% AVERAGE)</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">CRITICAL SERVICES > 95% AVAILABLE</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">10</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1000</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">49123.12</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4">4B</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">SERVICE AVAILABILITY (80% AVERAGE)</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">NORMAL SERVICES > 85% AVAILABLE</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">10</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">1000</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">49123.12</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                    <td class="border-b border-gray-200 py-2 px-4">0</td>
+                                </tr>
+                                <tr>
+                                    <td class="border-b border-gray-200 py-2 px-4 font-semibold">GRAND TOTAL</td>
+                                    <td class="border-b border-gray-200 py-2 px-4" colspan="3"></td>
+                                    <td class="border-b border-gray-200 py-2 px-4 font-semibold">100</td>
+                                    <td class="border-b border-gray-200 py-2 px-4 font-semibold">RM 34,123.11</td>
+                                    <td class="border-b border-gray-200 py-2 px-4"></td>
+                                    <td class="border-b border-gray-200 py-2 px-4 font-semibold">RM 48,234.12</td>
+                                    <td class="border-b border-gray-200 py-2 px-4"></td>
+                                    <td class="border-b border-gray-200 py-2 px-4"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--/Ascertain Performance Deduction (APD)-->
             </main>
             <!--/Main-->
         </div>
@@ -541,9 +662,62 @@
 
     </div>
 </div>
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Energy Usage Chart
+    var ctx = document.getElementById('energyUsageChart').getContext('2d');
+    var energyUsageChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1 Oct', '3 Oct', '7 Oct', '10 Oct', '14 Oct', '20 Oct', '23 Oct', '27 Oct', '30 Oct'],
+            datasets: [{
+                label: 'Energy',
+                data: [2, 3, 2.5, 3.5, 2.8, 1.5, 1.2, 3.7, 4],
+                borderColor: 'rgba(255, 206, 86, 1)',
+                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                fill: true,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+
+    // Water Usage Chart
+    var ctx2 = document.getElementById('waterUsageChart').getContext('2d');
+    var waterUsageChart = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['1 Oct', '3 Oct', '7 Oct', '10 Oct', '14 Oct', '20 Oct', '23 Oct', '27 Oct', '30 Oct'],
+            datasets: [{
+                label: 'Water',
+                data: [1, 1.5, 2, 3, 2.5, 3.5, 4, 3.8, 4],
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                fill: true,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+</script>
 <script src="js/main.js"></script>
-<script src="js/chart.js"></script>
-<script src="js/bundle.js"></script>
 </body>
 
 </html>

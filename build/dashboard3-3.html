@@ -250,18 +250,16 @@
             <main class="bg-white-300 flex-1 p-3 overflow-hidden">
                 <!-- Work Order Management -->
                 <div class="bg-white shadow rounded-lg p-6">
-                    <h2 class="text-2xl font-normal mb-6">Work Order Management</h2>
+                    <h2 class="text-2xl font-bold mb-6">Work Order Management</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- Work Order -->
                         <div class="bg-gray-100 p-6 rounded-lg shadow">
-                            <h4 class="text-xl font-normal mb-4 text-center">Task</h4>
-                            <h3 class="text-xl font-normal mb-4 text-center">Work Order</h3>
+                            <h3 class="text-xl font-semibold mb-4">Task Work Order</h3>
                             <div class="flex justify-center mb-4">
                                 <div class="relative">
-                                    <!-- <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
+                                    <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
                                         <span class="text-lg font-bold">64.35%<br>Complete</span>
-                                    </div> -->
-                                    <div id="chart"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="space-y-2">
@@ -285,8 +283,7 @@
                         </div>
                         <!-- PM Work Order -->
                         <div class="bg-gray-100 p-6 rounded-lg shadow">
-                            <h4 class="text-xl font-normal mb-4 text-center">Task</h4>
-                            <h3 class="text-xl font-normal mb-4 text-center">PM Work Order scheduled By Current Date</h3>
+                            <h3 class="text-xl font-semibold mb-4">Task PM Work Order scheduled By Current Date</h3>
                             <div class="flex justify-center mb-4">
                                 <div class="relative">
                                     <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
@@ -315,8 +312,7 @@
                         </div>
                         <!-- SCM Work Order -->
                         <div class="bg-gray-100 p-6 rounded-lg shadow">
-                            <h4 class="text-xl font-normal mb-4 text-center">Task</h4>
-                            <h3 class="text-xl font-normal mb-4 text-center">SCM Work Order</h3>
+                            <h3 class="text-xl font-semibold mb-4">Task SCM Work Order</h3>
                             <div class="flex justify-center mb-4">
                                 <div class="relative">
                                     <div class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
@@ -521,7 +517,33 @@
                         </div>
                     </div>
                     <!--/Summary of Aging Work Order Management Section-->
-                </div>                
+                </div>
+
+                <!-- Claim Summary Section (Graphs) -->
+                <div class="bg-white shadow rounded-lg p-6 mt-6">
+                    <h2 class="text-2xl font-bold mb-6">Claim Summary</h2>
+                    <div class="space-y-6">
+                        <!-- Energy Usage -->
+                        <div class="bg-gray-100 p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-semibold">Statistics</h3>
+                            <h4 class="text-lg font-semibold">Energy Usage</h4>
+                            <div class="relative">
+                                <canvas id="energyUsageChart"></canvas>
+                                <div class="absolute right-0 bottom-0 bg-gray-200 text-gray-800 text-xs rounded px-2 py-1">RM 22.37</div>
+                            </div>
+                        </div>
+                        <!-- Water Usage -->
+                        <div class="bg-gray-100 p-6 rounded-lg shadow">
+                            <h3 class="text-xl font-semibold">Statistics</h3>
+                            <h4 class="text-lg font-semibold">Water Usage</h4>
+                            <div class="relative">
+                                <canvas id="waterUsageChart"></canvas>
+                                <div class="absolute right-0 bottom-0 bg-gray-200 text-gray-800 text-xs rounded px-2 py-1">RM 37.32</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/Claim Summary Section (Graphs)-->
             </main>
             <!--/Main-->
         </div>
@@ -541,9 +563,62 @@
 
     </div>
 </div>
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Energy Usage Chart
+    var ctx = document.getElementById('energyUsageChart').getContext('2d');
+    var energyUsageChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['1 Oct', '3 Oct', '7 Oct', '10 Oct', '14 Oct', '20 Oct', '23 Oct', '27 Oct', '30 Oct'],
+            datasets: [{
+                label: 'Energy',
+                data: [2, 3, 2.5, 3.5, 2.8, 1.5, 1.2, 3.7, 4],
+                borderColor: 'rgba(255, 206, 86, 1)',
+                backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                fill: true,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+
+    // Water Usage Chart
+    var ctx2 = document.getElementById('waterUsageChart').getContext('2d');
+    var waterUsageChart = new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['1 Oct', '3 Oct', '7 Oct', '10 Oct', '14 Oct', '20 Oct', '23 Oct', '27 Oct', '30 Oct'],
+            datasets: [{
+                label: 'Water',
+                data: [1, 1.5, 2, 3, 2.5, 3.5, 4, 3.8, 4],
+                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                fill: true,
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
+                }
+            }
+        }
+    });
+</script>
 <script src="js/main.js"></script>
-<script src="js/chart.js"></script>
-<script src="js/bundle.js"></script>
 </body>
 
 </html>
