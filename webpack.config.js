@@ -1,7 +1,8 @@
 const path = require('path');
+// const { Chunk } = require('webpack');
 
 module.exports = {
-    entry: './build/js/chart.js',
+    entry: './src/js/main.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'build/js')
@@ -26,6 +27,11 @@ module.exports = {
                 ]
             }
         ]
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
     },
     mode: 'development'
 };
