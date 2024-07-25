@@ -1,5 +1,4 @@
 const path = require('path');
-// const { Chunk } = require('webpack');
 
 module.exports = {
     entry: './src/js/main.js',

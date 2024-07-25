@@ -1,26 +1,47 @@
+//import ApexCharts from 'apexcharts';
 import ApexCharts from 'apexcharts';
 
 export function renderPieChart(elementId, data) {
+
+    // Calculate the total value
+  const totalValue = data.reduce((acc, val) => acc + val, 0);
+
+  // Function to format the total value as a percentage
+  const formatTotalValue = (total) => {
+    return '${(total / 100).toFixed(2)}%';
+  };
+
     var options = {
-        // series: [44, 55, 41, 17, 15], 
         series: data,
         chart: {
             type: 'donut',
-        },        
+        },
         plotOptions: {
             pie: {
                 donut: {
+                    size: '65%',
+                    background: 'transparent',
                     labels: {
                         show: true,
                         name: {
-                            show:true,
+                            show: true,
+                            fontsize: '22px',
+                            fontweight: 300
                         },
                         value: {
-                            show:true,
+                            show: true
+                        },
+                        total: {
+                            show: true,
+                            showAlways: true,
+                            label: formatTotalValue(totalValue),
+                            fontWeight: 300,
+                            fontSize: '22px'
                         }
                     }
                 }
             }
+
         },
         responsive: [{
             breakpoint: 480,
