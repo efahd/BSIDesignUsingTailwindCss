@@ -1,3 +1,4 @@
+//-- The code below for placing the charts configuration paths and loads the charts functions -- 
 export async function loadChart(chartType, elementId, config) {
     try {
         switch (chartType) {
@@ -13,18 +14,19 @@ export async function loadChart(chartType, elementId, config) {
             //     const { renderColumnChart } = await import('../../build/js/charts/columnChart.js');
             //     renderColumnChart(elementId);
             //     break;
-            case 'donut':
-                const { renderPieChart } = await import('../../build/js/charts/donutChart.js');
-                renderPieChart(elementId, config.data);
-                break;
             // case 'radial':
             //     const { renderRadialChart } = await import('../../build/js/charts/radialChart.js');
             //     renderRadialChart(elementId);
             //     break;
+            case 'donut':
+                const { renderPieChart } = await import('../../build/js/charts/donutChart.js');
+                renderPieChart(elementId, config.data);
+                break;      
             default:
                 console.error('unknown chart type: ', chartType);
         }
     } catch (error) {
-        console.error(`Failed to load ${chartType} chart in element ${elementId}:`, error);    
+        //Catch any missing or misconfigured charts
+        console.error(`Failed to load ${chartType} chart in element ${elementId}:`, error);
     }
 }

@@ -3,15 +3,13 @@ import ApexCharts from 'apexcharts';
 
 export function renderPieChart(elementId, data) {
 
-    // Calculate the total value
-  const totalValue = data.reduce((acc, val) => acc + val, 0);
-
-  // Function to format the total value as a percentage
-  const formatTotalValue = (total) => {
-    return '${(total / 100).toFixed(2)}%';
-  };
-
     var options = {
+        dataLabels: {
+            enabled: false
+        },
+        legend: {
+            show: false
+        },
         series: data,
         chart: {
             type: 'donut',
@@ -34,7 +32,7 @@ export function renderPieChart(elementId, data) {
                         total: {
                             show: true,
                             showAlways: true,
-                            label: formatTotalValue(totalValue),
+                            
                             fontWeight: 300,
                             fontSize: '22px'
                         }
