@@ -1,4 +1,6 @@
+const { plugins } = require('chart.js');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/js/main.js',
@@ -32,5 +34,11 @@ module.exports = {
             chunks: 'all',
         },
     },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
+    ],
     mode: 'development'
 };

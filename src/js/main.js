@@ -1,9 +1,11 @@
 
 import { loadChart } from './chartLoader'; // The charts will be load asynchronously using chartLoader.js
+import $ from 'jquery';
+import '../../build/js/charts/animated-counter-progressbar';
 
 //-- Place the inputs for the charts in the code below for each charts respectively. --
 // Data fetch from the database will placed in variable 'data' which will load into their own respective charts and their settings.
-// KEEP IN MIND ANY EDITS MADE IN THIS PAGE SHOULD BE COMPILED AFTER USING COMMAND 'npx webpack'
+// [IMPORTANT] KEEP IN MIND ANY EDITS MADE IN THIS PAGE SHOULD BE COMPILED AFTER USING COMMAND 'npx webpack'
 document.addEventListener('DOMContentLoaded', () => {
     // loadChart('line', '#chart1');
     // loadChart('bar', '#chart2');
@@ -24,6 +26,33 @@ document.addEventListener('DOMContentLoaded', () => {
     //-- RENDER THE HORIZONTAL LINE CHART DATA -- 
     
     
+    //-- RENDER PROGRESS BAR SCRIPT --
+    $("[progress-bar]").each(function() {
+        $(this)
+            .find(".progress-fill")
+            .animate(
+                {
+                    width: $(this).attr("data-percentage"),
+                },
+                2000
+            );
+        
+        $(this)
+            .find(".progress-number-mark")
+            .animate(
+                {left: $(this).attr("data-percentage")},
+                {
+                    duration: 2000,
+                    step: function (now, fx) {
+                        var data = Math.round(now);
+                        $(this)
+                            .find(".percent")
+                            .html(data + '%');
+                    },
+                }
+            );
+    });
+
 
     
 });
