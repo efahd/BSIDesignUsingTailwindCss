@@ -275,39 +275,88 @@
                                         <div id="chart4a"></div>
                                     </div>
                                 </div>
-                                <div class="space-y-2" style="border:1px solid forestgreen;">
-
-                                    <canvas id="line4a"></canvas>
-                                    <div class="flex justify-between text-sm">
-                                        <h4 class="progress-title">Open</h4>
-                                        <div progress-bar data-percentage="30%">
-                                            <div class="progress-number">
-                                                <div class="progress-number-mark">
-                                                    <span class="percent"></span>
-                                                    <span class="down-arrow"></span>
+                                <div class="space-y-2">
+                                    <!-- OPEN PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Open</h4>
+                                            <h4 class="progress-title progress-value-open p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="open" class="w-full">
+                                                <div class="progress-number">
+                                                    <div class="progress-number-mark">
+                                                        <span class="percent"></span>
+                                                        <span class="down-arrow"></span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="progress-bg">
-                                                <div class="progress-fill"></div>
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- <div class="flex justify-between text-sm">
-                                    <span>Open</span>
-                                    <span>75</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Close / Complete</span>
-                                    <span>306</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Cancel</span>
-                                    <span>13</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Total</span>
-                                    <span>394</span>
-                                </div> -->
+                                    <!-- CLOSE/COMPLETE PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Close / Complete</h4>
+                                            <h4 class="progress-title progress-value-closeComplete p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="closeComplete" class="w-full">
+                                                <div class="progress-number">
+                                                    <div class="progress-number-mark">
+                                                        <span class="percent"></span>
+                                                        <span class="down-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CANCEL PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Cancel</h4>
+                                            <h4 class="progress-title progress-value-cancel p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="cancel" class="w-full">
+                                                <div class="progress-number">
+                                                    <div class="progress-number-mark">
+                                                        <span class="percent"></span>
+                                                        <span class="down-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- TOTAL PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Total</h4>
+                                            <h4 class="progress-title progress-value-total p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="total" class="w-full">
+                                                <div class="progress-number">
+                                                    <div class="progress-number-mark">
+                                                        <span class="percent"></span>
+                                                        <span class="down-arrow"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <!-- PM Work Order -->
@@ -322,22 +371,6 @@
                                 </div>
                                 <div class="space-y-2" style="border:1px solid forestgreen;">
                                     <canvas id="line4b"></canvas>
-                                    <!-- <div class="flex justify-between text-sm">
-                                    <span>Open</span>
-                                    <span>75</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Close / Complete</span>
-                                    <span>306</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Cancel</span>
-                                    <span>13</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Total</span>
-                                    <span>394</span>
-                                </div> -->
                                 </div>
                             </div>
                             <!-- SCM Work Order -->
@@ -351,22 +384,6 @@
                                 </div>
                                 <div class="space-y-2" style="border:1px solid forestgreen;">
                                     <canvas id="line4a"></canvas>
-                                    <!-- <div class="flex justify-between text-sm">
-                                    <span>Open</span>
-                                    <span>37</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Close / Complete</span>
-                                    <span>0</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Cancel</span>
-                                    <span>0</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span>Total</span>
-                                    <span>37</span>
-                                </div> -->
                                 </div>
                             </div>
                         </div>
@@ -570,7 +587,11 @@
 
         </div>
     </div>
-    <script src="js/bundle.js"></script>
+    <script src="js/main.bundle.js"></script>
+    <script src="js/build_js_charts_donutChart_js.bundle.js"></script>
+    <script src="js/vendors-node_modules_apexcharts_dist_apexcharts_common_js.bundle.js"></script>
+    <script src="js/vendors-node_modules_jquery_dist_jquery_js.bundle.js"></script>
+
 
 </body>
 

@@ -1,4 +1,3 @@
-//import ApexCharts from 'apexcharts';
 import ApexCharts from 'apexcharts';
 
 export function renderPieChart(elementId, data) {

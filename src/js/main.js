@@ -21,18 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     loadChart('donut','#chart4c', {
         data: [25, 35, 45, 55, 19],
-    });
-    
-    //-- RENDER THE HORIZONTAL LINE CHART DATA -- 
-    
+    });    
     
     //-- RENDER PROGRESS BAR SCRIPT --
+
+    //The value for progress-bar will be fetch through this variables, in case using a live dynamic data from database, edit the code below to fetch the value from other souce
+    const progressValues = {
+        open: 50,
+        closeComplete: 45,
+        cancel: 20,
+        total: 90
+    }
+
+    // Update the progress bar elements with dynamic values
+    for (const type in progressValues) {
+        const progressValue = progressValues[type];
+        
+        $(`[data-type="${type}"]`).attr("data-percentage", `${progressValue}%`);
+        $(`.progress-value-${type}`).text(`${progressValue}%`);
+    }
+
     $("[progress-bar]").each(function() {
+        const progressValue = $(this).attr("data-percentage");
+
         $(this)
             .find(".progress-fill")
             .animate(
                 {
-                    width: $(this).attr("data-percentage"),
+                    width: progressValue,
                 },
                 2000
             );
@@ -40,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         $(this)
             .find(".progress-number-mark")
             .animate(
-                {left: $(this).attr("data-percentage")},
+                {left: progressValue},
                 {
                     duration: 2000,
                     step: function (now, fx) {
@@ -52,7 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             );
     });
-
-
     
 });
