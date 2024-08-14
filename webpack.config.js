@@ -41,5 +41,6 @@ module.exports = {
             jQuery: 'jquery'
         })
     ],
-    mode: 'development'
+    mode: 'development',
+    watch: true
 };

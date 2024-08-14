@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="./dist/all.css"> -->
     <link rel="stylesheet" href="css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i,700,700i" rel="stylesheet">
-    <title>Dashboard | Tailwind Admin</title>
+    <title>Dashboard | Tailwind Admin - FrontPage</title>
 </head>
 
 <body>
@@ -263,8 +263,8 @@
                 <!--Main-->
                 <main class="bg-white-300 flex-1 p-3 overflow-hidden">
                     <!-- Work Order Management -->
-                    <div class="bg-white shadow rounded-lg p-6">
-                        <h2 class="text-2xl font-normal mb-6">Work Order Management</h2>
+                    <div class="bg-white shadow rounded-lg p-6 my-5">
+                        <h2 class="text-xl font-bold mb-4">Work Order Management</h2>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <!-- Work Order -->
                             <div class="bg-gray-100 p-6 rounded-lg shadow">
@@ -284,12 +284,6 @@
                                         </div>
                                         <div class="flex justify-between text-sm">
                                             <div progress-bar data-type="open" class="w-full">
-                                                <div class="progress-number">
-                                                    <div class="progress-number-mark">
-                                                        <span class="percent"></span>
-                                                        <span class="down-arrow"></span>
-                                                    </div>
-                                                </div>
                                                 <div class="progress-bg">
                                                     <div class="progress-fill"></div>
                                                 </div>
@@ -304,12 +298,6 @@
                                         </div>
                                         <div class="flex justify-between text-sm">
                                             <div progress-bar data-type="closeComplete" class="w-full">
-                                                <div class="progress-number">
-                                                    <div class="progress-number-mark">
-                                                        <span class="percent"></span>
-                                                        <span class="down-arrow"></span>
-                                                    </div>
-                                                </div>
                                                 <div class="progress-bg">
                                                     <div class="progress-fill"></div>
                                                 </div>
@@ -324,12 +312,6 @@
                                         </div>
                                         <div class="flex justify-between text-sm">
                                             <div progress-bar data-type="cancel" class="w-full">
-                                                <div class="progress-number">
-                                                    <div class="progress-number-mark">
-                                                        <span class="percent"></span>
-                                                        <span class="down-arrow"></span>
-                                                    </div>
-                                                </div>
                                                 <div class="progress-bg">
                                                     <div class="progress-fill"></div>
                                                 </div>
@@ -344,19 +326,12 @@
                                         </div>
                                         <div class="flex justify-between text-sm">
                                             <div progress-bar data-type="total" class="w-full">
-                                                <div class="progress-number">
-                                                    <div class="progress-number-mark">
-                                                        <span class="percent"></span>
-                                                        <span class="down-arrow"></span>
-                                                    </div>
-                                                </div>
                                                 <div class="progress-bg">
                                                     <div class="progress-fill"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <!-- PM Work Order -->
@@ -369,8 +344,63 @@
                                         <div id="chart4b"></div>
                                     </div>
                                 </div>
-                                <div class="space-y-2" style="border:1px solid forestgreen;">
-                                    <canvas id="line4b"></canvas>
+                                <div class="space-y-2">
+                                    <!-- OPEN PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Open</h4>
+                                            <h4 class="progress-title progress-value-open p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="open" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CLOSE/COMPLETE PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Close / Complete</h4>
+                                            <h4 class="progress-title progress-value-closeComplete p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="closeComplete" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CANCEL PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Cancel</h4>
+                                            <h4 class="progress-title progress-value-cancel p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="cancel" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- TOTAL PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Total</h4>
+                                            <h4 class="progress-title progress-value-total p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="total" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- SCM Work Order -->
@@ -382,8 +412,63 @@
                                         <div id="chart4c"></div>
                                     </div>
                                 </div>
-                                <div class="space-y-2" style="border:1px solid forestgreen;">
-                                    <canvas id="line4a"></canvas>
+                                <div class="space-y-2">
+                                    <!-- OPEN PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Open</h4>
+                                            <h4 class="progress-title progress-value-open p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="open" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CLOSE/COMPLETE PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Close / Complete</h4>
+                                            <h4 class="progress-title progress-value-closeComplete p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="closeComplete" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- CANCEL PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Cancel</h4>
+                                            <h4 class="progress-title progress-value-cancel p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="cancel" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- TOTAL PROGRESS BAR -->
+                                    <div>
+                                        <div class="flex justify-between text-sm">
+                                            <h4 class="progress-title" class="p-0">Total</h4>
+                                            <h4 class="progress-title progress-value-total p-0"></h4>
+                                        </div>
+                                        <div class="flex justify-between text-sm">
+                                            <div progress-bar data-type="total" class="w-full">
+                                                <div class="progress-bg">
+                                                    <div class="progress-fill"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -391,176 +476,233 @@
                     <!--/Work Order Management-->
 
                     <!-- KPI and Summary of Aging Work Order Management -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
                         <!-- KPI Section -->
-                        <div class="bg-white shadow rounded-lg p-6">
-                            <h2 class="text-xl font-bold mb-4">Key Performance Indicator (KPI)</h2>
-                            <div class="mb-6">
-                                <h3 class="text-sm font-semibold mb-2">Achieved</h3>
-                                <div class="flex items-center space-x-4">
-                                    <span class="bg-green-500 text-white px-3 py-1 rounded-full">000</span>
-                                    <span class="text-sm">Achieved</span>
-                                    <span class="bg-red-500 text-white px-3 py-1 rounded-full">000</span>
-                                    <span class="text-sm">Failed</span>
-                                    <span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full">000</span>
-                                    <span class="text-sm">N/A</span>
+                        <div class="bg-white shadow rounded-lg p-6 ">
+                            <!-- KPI Status -->
+                            <div class="mb-5">
+                                <h2 class="text-xl font-bold mb-4">Key Performance Indicator (KPI)</h2>
+                                <div class="grid grid-cols-3 gap-4 mt-2">
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">000</span>
+                                        <span class="text-green-500">Achieved</span>
+                                    </div>
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">000</span>
+                                        <span class="text-red-500">Failed</span>
+                                    </div>
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">000</span>
+                                        <span class="text-gray-500">N/A</span>
+                                    </div>
+                                </div>
+                                <!-- Compliance Section -->
+                                <div class="flex justify-between items-center mt-4 p-4 border rounded-lg">
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-green-500">✔️</span>
+                                        <span class="font-semibold">Comply</span>
+                                        <span class="text-green-500">YES</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <span class="text-xl font-bold text-gray-700">#</span>
+                                        <span class="font-semibold">Total</span>
+                                        <span class="text-xl font-bold text-gray-700">000</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-6">
-                                <h3 class="text-sm font-semibold mb-2">Demerit point</h3>
-                                <div class="flex items-center space-x-4">
-                                    <span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full">000</span>
-                                    <span class="text-sm">Monthly</span>
-                                    <span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full">000</span>
-                                    <span class="text-sm">Quarterly</span>
-                                    <span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full">000</span>
-                                    <span class="text-sm">Yearly</span>
+                            <!-- Demerit Points -->
+                            <div class="mb-5">
+                                <h3 class="text-xl font-bold mb-4">Demerit point</h3>
+                                <div class="grid grid-cols-3 gap-4 mt-2">
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">000</span>
+                                        <span class="text-gray-500">Monthly</span>
+                                    </div>
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">000</span>
+                                        <span class="text-gray-500">Quarterly</span>
+                                    </div>
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">000</span>
+                                        <span class="text-gray-500">Yearly</span>
+                                    </div>
+                                </div>
+                                <div class="my-5">
+                                    <a href="#"
+                                        class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors w-full text-center">
+                                        Ascertain Performance Deduction (APD) →
+                                    </a>
                                 </div>
                             </div>
-                            <div class="mb-6">
-                                <h3 class="text-sm font-semibold mb-2">Contractual Obligation</h3>
-                                <div class="flex items-center space-x-4">
-                                    <span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full">00</span>
-                                    <span class="text-sm">Current</span>
-                                    <span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full">00</span>
-                                    <span class="text-sm">Upcoming</span>
-                                    <span class="bg-gray-300 text-gray-700 px-3 py-1 rounded-full">00</span>
-                                    <span class="text-sm">Shortage</span>
+                            <!-- Contractual Obligation -->
+                            <div class="mb-5">
+                                <h3 class="text-xl font-bold mb-4">Contractual Obligation</h3>
+                                <div class="grid grid-cols-3 gap-4 mt-2">
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">00</span>
+                                        <span class="text-gray-500">Total</span>
+                                    </div>
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">00</span>
+                                        <span class="text-gray-500">Current</span>
+                                    </div>
+                                    <div class="flex flex-col items-center p-4 border rounded-lg">
+                                        <span class="text-xl font-bold text-gray-700">00</span>
+                                        <span class="text-gray-500">Shortage</span>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Utility Management -->
+                            <h2 class="text-xl font-bold mb-4">Utility Management</h2>
+                            <!-- Energy Section -->
+                            <div class="mb-6">
+                                <h2 class="text-md font-medium text-gray-900 mb-2">Energy</h2>
+                                <div id="chart6a" class="relative"></div>
+                            </div>
+
+                            <!-- Water Section -->
                             <div>
-                                <h3 class="text-sm font-semibold mb-2">Utility Management</h3>
-                                <div class="mb-4">
-                                    <h4 class="text-sm font-semibold">Energy</h4>
-                                    <div class="h-4 bg-yellow-500" style="width: 50%;"></div>
-                                    <div class="text-xs">April: 99.5k SJ</div>
-                                    <div class="h-4 bg-yellow-500" style="width: 75%;"></div>
-                                    <div class="text-xs">May: 74.2k SJ</div>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-semibold">Water</h4>
-                                    <div class="h-4 bg-blue-500" style="width: 75%;"></div>
-                                    <div class="text-xs">April: 60k L</div>
-                                    <div class="h-4 bg-blue-500" style="width: 90%;"></div>
-                                    <div class="text-xs">May: 75.7k L</div>
-                                </div>
+                                <h2 class="text-md font-medium text-gray-900 mb-2">Water</h2>
+                                <div id="chart6b" class="relative"></div>
                             </div>
                         </div>
+
                         <!-- Summary of Aging Work Order Management Section -->
                         <div class="bg-white shadow rounded-lg p-6 md:col-span-2">
                             <h2 class="text-xl font-bold mb-4">Summary of Aging Work Order Management</h2>
                             <div class="space-y-6">
                                 <!-- Less than 30 days -->
-                                <div class="bg-gray-100 p-6 rounded-lg shadow">
-                                    <h3 class="text-xl font-semibold mb-4">Less Than 30 Days</h3>
-                                    <div class="flex justify-center mb-4">
-                                        <div class="relative">
-                                            <div
-                                                class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
-                                                <span class="text-lg font-bold">100%<br>Status</span>
-                                            </div>
-                                        </div>
+                                <div class="mb-8 flex">
+                                    <!-- Chart Section -->
+                                    <div class="relative align-middle items-center">
+                                        <div id="chart5a"></div>
                                     </div>
-                                    <div class="space-y-2">
-                                        <div class="flex justify-between text-sm">
-                                            <span>Work Type</span>
-                                            <span>Corrective</span>
-                                            <span>Self Finding/Pro-Active</span>
-                                            <span>Scheduled Corrective Maintenance</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Total</span>
-                                            <span>61</span>
-                                            <span>11</span>
-                                            <span>4</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Open</span>
-                                            <span>0</span>
-                                            <span>0</span>
-                                            <span>0</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Done</span>
-                                            <span>61</span>
-                                            <span>11</span>
-                                            <span>4</span>
+                                    <!-- Data Section -->
+                                    <div class="flex-1 ml-6">
+                                        <div class="text-lg font-medium text-gray-900">LESS THAN 30 DAYS</div>
+                                        <div class="grid grid-cols-7 text-sm text-gray-900">
+                                            <div class="font-medium col-span-4 my-3 text-left">Work Type</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Total</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Open</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Done</div>
+
+                                            <!-- Aging Work Corrective Section < 30 Days -->
+                                            <div class="flex items-center col-span-4 text-left">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Corrective</span>
+                                            </div>
+                                            <div class="text col-span-1 my-5 text-center">51</div>
+                                            <div class="text col-span-1 my-5 text-center">11</div>
+                                            <div class="text col-span-1 my-5 text-center">72</div>
+
+                                            <!-- Less than 30 Aging Work Self Finding/Pro-Active Section < 30 Days -->
+                                            <div class="flex items-center col-span-4 text-left mb-5">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Self Finding / Pro-Active</span>
+                                            </div>
+                                            <div class="text col-span-1 text-center">11</div>
+                                            <div class="text col-span-1 text-center">0</div>
+                                            <div class="text col-span-1 text-center">11</div>
+
+                                            <!-- Aging Work Scheduled Corrective Maintenance Section < 30 Days -->
+                                            <div class="flex items-center col-span-4 text-left">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Scheduled Corrective Maintenance</span>
+                                            </div>
+                                            <div class="text col-span-1 text-center">24</div>
+                                            <div class="text col-span-1 text-center">15</div>
+                                            <div class="text col-span-1 text-center">39</div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- Less than 60 days -->
-                                <div class="bg-gray-100 p-6 rounded-lg shadow">
-                                    <h3 class="text-xl font-semibold mb-4">Less Than 60 Days</h3>
-                                    <div class="flex justify-center mb-4">
-                                        <div class="relative">
-                                            <div
-                                                class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
-                                                <span class="text-lg font-bold">67%<br>Status</span>
-                                            </div>
-                                        </div>
+                                <div class="mb-8 flex">
+                                    <!-- Chart Section -->
+                                    <div class="relative align-middle items-center">
+                                        <div id="chart5b"></div>
                                     </div>
-                                    <div class="space-y-2">
-                                        <div class="flex justify-between text-sm">
-                                            <span>Work Type</span>
-                                            <span>Corrective</span>
-                                            <span>Self Finding/Pro-Active</span>
-                                            <span>Scheduled Corrective Maintenance</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Total</span>
-                                            <span>61</span>
-                                            <span>11</span>
-                                            <span>4</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Open</span>
-                                            <span>0</span>
-                                            <span>0</span>
-                                            <span>0</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Done</span>
-                                            <span>61</span>
-                                            <span>11</span>
-                                            <span>4</span>
+                                    <!-- Data Section -->
+                                    <div class="flex-1 ml-6">
+                                        <div class="text-lg font-medium text-gray-900">LESS THAN 60 DAYS</div>
+                                        <div class="grid grid-cols-7 text-sm text-gray-900">
+                                            <div class="font-medium col-span-4 my-3 text-left">Work Type</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Total</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Open</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Done</div>
+
+                                            <!-- Aging Work Corrective Section < 60 Days -->
+                                            <div class="flex items-center col-span-4 text-left">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Corrective</span>
+                                            </div>
+                                            <div class="text col-span-1 my-5 text-center">51</div>
+                                            <div class="text col-span-1 my-5 text-center">11</div>
+                                            <div class="text col-span-1 my-5 text-center">72</div>
+
+                                            <!-- Less than 30 Aging Work Self Finding/Pro-Active Section < 60 Days -->
+                                            <div class="flex items-center col-span-4 text-left mb-5">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Self Finding / Pro-Active</span>
+                                            </div>
+                                            <div class="text col-span-1 text-center">11</div>
+                                            <div class="text col-span-1 text-center">0</div>
+                                            <div class="text col-span-1 text-center">11</div>
+
+                                            <!-- Aging Work Scheduled Corrective Maintenance Section < 60 Days -->
+                                            <div class="flex items-center col-span-4 text-left">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Scheduled Corrective Maintenance</span>
+                                            </div>
+                                            <div class="text col-span-1 text-center">24</div>
+                                            <div class="text col-span-1 text-center">15</div>
+                                            <div class="text col-span-1 text-center">39</div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- Less than 90 days -->
-                                <div class="bg-gray-100 p-6 rounded-lg shadow">
-                                    <h3 class="text-xl font-semibold mb-4">Less Than 90 Days</h3>
-                                    <div class="flex justify-center mb-4">
-                                        <div class="relative">
-                                            <div
-                                                class="w-24 h-24 rounded-full border-8 border-gray-200 flex items-center justify-center">
-                                                <span class="text-lg font-bold">67%<br>Status</span>
-                                            </div>
-                                        </div>
+                                <div class="mb-8 flex">
+                                    <!-- Chart Section -->
+                                    <div class="relative align-middle items-center">
+                                        <div id="chart5c"></div>
                                     </div>
-                                    <div class="space-y-2">
-                                        <div class="flex justify-between text-sm">
-                                            <span>Work Type</span>
-                                            <span>Corrective</span>
-                                            <span>Self Finding/Pro-Active</span>
-                                            <span>Scheduled Corrective Maintenance</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Total</span>
-                                            <span>61</span>
-                                            <span>11</span>
-                                            <span>4</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Open</span>
-                                            <span>0</span>
-                                            <span>0</span>
-                                            <span>0</span>
-                                        </div>
-                                        <div class="flex justify-between text-sm">
-                                            <span>Done</span>
-                                            <span>61</span>
-                                            <span>11</span>
-                                            <span>4</span>
+                                    <!-- Data Section -->
+                                    <div class="flex-1 ml-6">
+                                        <div class="text-lg font-medium text-gray-900">LESS THAN 90 DAYS</div>
+                                        <div class="grid grid-cols-7 text-sm text-gray-900">
+                                            <div class="font-medium col-span-4 my-3 text-left">Work Type</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Total</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Open</div>
+                                            <div class="font-medium col-span-1 my-3 text-center">Done</div>
+
+                                            <!-- Aging Work Corrective Section < 90 Days -->
+                                            <div class="flex items-center col-span-4 text-left">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Corrective</span>
+                                            </div>
+                                            <div class="text col-span-1 my-5 text-center">51</div>
+                                            <div class="text col-span-1 my-5 text-center">11</div>
+                                            <div class="text col-span-1 my-5 text-center">72</div>
+
+                                            <!-- Less than 30 Aging Work Self Finding/Pro-Active Section < 90 Days -->
+                                            <div class="flex items-center col-span-4 text-left mb-5">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Self Finding / Pro-Active</span>
+                                            </div>
+                                            <div class="text col-span-1 text-center">11</div>
+                                            <div class="text col-span-1 text-center">0</div>
+                                            <div class="text col-span-1 text-center">11</div>
+
+                                            <!-- Aging Work Scheduled Corrective Maintenance Section < 90 Days -->
+                                            <div class="flex items-center col-span-4 text-left">
+                                                <div class="w-2.5 h-2.5 bg-blue-500 rounded-full mr-2"></div>
+                                                <span>Scheduled Corrective Maintenance</span>
+                                            </div>
+                                            <div class="text col-span-1 text-center">24</div>
+                                            <div class="text col-span-1 text-center">15</div>
+                                            <div class="text col-span-1 text-center">39</div>
                                         </div>
                                     </div>
                                 </div>
@@ -589,10 +731,10 @@
     </div>
     <script src="js/main.bundle.js"></script>
     <script src="js/build_js_charts_donutChart_js.bundle.js"></script>
+    <script src="js/build_js_charts_barChart_js.bundle.js"></script>
     <script src="js/vendors-node_modules_apexcharts_dist_apexcharts_common_js.bundle.js"></script>
     <script src="js/vendors-node_modules_jquery_dist_jquery_js.bundle.js"></script>
-
-
+    
 </body>
 
 </html>

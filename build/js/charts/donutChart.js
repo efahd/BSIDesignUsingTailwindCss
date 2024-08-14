@@ -2,6 +2,8 @@ import ApexCharts from 'apexcharts';
 
 export function renderPieChart(elementId, data) {
 
+    console.log("Work Order Management data: ", data); // This should now correctly log the numeric value
+
     var options = {
         dataLabels: {
             enabled: false
